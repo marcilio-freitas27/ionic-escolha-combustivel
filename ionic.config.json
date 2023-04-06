@@ -1,0 +1,7 @@
+{
+  "name": "ionic-escolha-combustivel",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
