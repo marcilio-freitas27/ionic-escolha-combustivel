@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
+import { IonInput, IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -9,5 +9,22 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule],
 })
 export class HomePage {
+
+  resultado: any;
+  color: any;
   constructor() {}
+
+  calcularQualUsar(alcool: IonInput, gasolina: IonInput) {
+   let calculo: any;
+   if(alcool.value != null && gasolina.value != null){
+    calculo = +alcool.value / +gasolina.value;
+    if(calculo <= 0.7 ){
+      this.resultado = 'Abastecer com Álcool'
+      this.color = "primary"
+    }else {
+      this.resultado = 'Abastecer com Gasolina';
+      this.color = "warning"
+    }
+   }
+  }
 }
