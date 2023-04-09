@@ -14,6 +14,11 @@ export class HomePage {
   color: any;
   constructor() {}
 
+  ngOnInit(){
+    this.resultado = "Álcool ou Gasolina?";
+    this.color = "dark";
+  }
+
   calcularQualUsar(alcool: IonInput, gasolina: IonInput) {
    let calculo: any;
    if(alcool.value != null && gasolina.value != null){
