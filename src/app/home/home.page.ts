@@ -12,11 +12,16 @@ export class HomePage {
 
   resultado: any;
   color: any;
-  constructor() {}
+  tema: any;
+  checked: boolean;
+  constructor() {
+    this.checked = false;
+  }
 
   ngOnInit(){
     this.resultado = "Álcool ou Gasolina?";
     this.color = "dark";
+    this.tema = "dark";
   }
 
   calcularQualUsar(alcool: IonInput, gasolina: IonInput) {
@@ -31,5 +36,10 @@ export class HomePage {
       this.color = "warning"
     }
    }
+  }
+
+  mudarTema(){
+    this.checked ? this.tema = "dark" : this.tema = "light";
+    this.checked = !this.checked;
   }
 }

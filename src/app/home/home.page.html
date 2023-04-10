@@ -1,24 +1,27 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Qual o combustível?
-    </ion-title>
+  <ion-toolbar [color]="tema">
+      <ion-list [style]="{ backgroundColor: '#000' }">
+        <ion-item [color]="tema">
+          Qual o combustível?
+          <ion-toggle [checked]="checked" (click)="mudarTema()" justify="end">Tema</ion-toggle>
+        </ion-item>
+      </ion-list>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" color="dark">
+<ion-content [fullscreen]="true" [color]="tema">
   <div id="container">
-    <ion-card>
+    <ion-card [color]="tema">
       <ion-card-content>
-        <ion-item color="dark">
+        <ion-item [color]="tema">
           <ion-label position="floating">Preco do álcool</ion-label>
           <ion-input label-placement="floating" type="text" fill="outline" #alcool></ion-input>
         </ion-item>
-        <ion-item color="dark">
+        <ion-item [color]="tema">
           <ion-label for="gasolina" position="floating">Preco da gasolina</ion-label>
           <ion-input label-placement="floating" id="gasolina" type="text" fill="solid"  #gasolina></ion-input>
         </ion-item>
-        <ion-item color="dark">
+        <ion-item [color]="tema">
           <ion-button (click)="calcularQualUsar(alcool, gasolina)" shape="round">
             Calcular
           </ion-button>
@@ -31,8 +34,8 @@
   </div>
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar>
+<ion-footer >
+  <ion-toolbar [color]="tema">
     <ion-title>v1.0.0</ion-title>
   </ion-toolbar>
 </ion-footer>
