@@ -42,4 +42,12 @@ export class HomePage {
     this.checked ? this.tema = "dark" : this.tema = "light";
     this.checked = !this.checked;
   }
+
+  limparEntradas(alcool: IonInput, gasolina: IonInput){
+   if(alcool.value != null && gasolina.value != null){
+    alcool.value = '';
+    gasolina.value = '';
+    this.resultado = "Álcool ou Gasolina?";
+   }
+  }
 }
