@@ -48,6 +48,7 @@ export class HomePage {
     alcool.value = '';
     gasolina.value = '';
     this.resultado = "Álcool ou Gasolina?";
+    this.color = "dark";
    }
   }
 }

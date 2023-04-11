@@ -1,11 +1,11 @@
 <ion-header [translucent]="true">
   <ion-toolbar [color]="tema">
-      <ion-list [style]="{ backgroundColor: '#000' }">
-        <ion-item [color]="tema">
+      <ion-title>
+        <div class="flex-toolbar">
           Qual o combustível?
           <ion-toggle [checked]="checked" (click)="mudarTema()" justify="end">Tema</ion-toggle>
-        </ion-item>
-      </ion-list>
+        </div>
+      </ion-title>
   </ion-toolbar>
 </ion-header>
 
