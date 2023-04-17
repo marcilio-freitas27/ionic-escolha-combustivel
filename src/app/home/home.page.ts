@@ -49,9 +49,7 @@ export class HomePage {
   }
 
   limparEntradas(){
-    let valores = this.formGroup.value;
-    valores.alcool = '';
-    valores.gasolina = '';
+    this.formGroup.reset()
     this.resultado = "Álcool ou Gasolina?";
     this.color = "dark";
   }

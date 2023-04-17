@@ -16,11 +16,21 @@
         <ion-card-content>
           <ion-item [color]="tema">
             <ion-label position="floating">Preco do álcool</ion-label>
-            <ion-input label-placement="floating" type="number" fill="outline" formControlName="alcool"></ion-input>
+            <ion-input
+                  labelPlacement="floating" 
+                  type="number" 
+                  fill="solid" 
+                  formControlName="alcool"
+                  ></ion-input>
           </ion-item>
           <ion-item [color]="tema">
-            <ion-label for="gasolina" position="floating">Preco da gasolina</ion-label>
-            <ion-input label-placement="floating" id="gasolina" type="number" fill="solid" formControlName="gasolina"></ion-input>
+            <ion-label position="floating">Preco da gasolina</ion-label>
+            <ion-input 
+                  labelPlacement="floating" 
+                  type="number" 
+                  fill="solid" 
+                  formControlName="gasolina"
+                  ></ion-input>
           </ion-item>
           <ion-item [color]="tema">
             <ion-button (click)="calcularQualUsar()" 
